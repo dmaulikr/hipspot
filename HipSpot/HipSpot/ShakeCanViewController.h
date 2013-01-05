@@ -13,4 +13,11 @@
 @property (nonatomic, weak) IBOutlet UILabel *timerLabel;
 @property (nonatomic, weak) IBOutlet UIView *shakeCanView;
 
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic) int timerCount;
+
+@property (nonatomic) int shakeCount;
+
+- (IBAction)shake:(id)sender;
+
 @end
