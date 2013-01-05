@@ -9,7 +9,9 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
-#define TIME_TO_SHAKE       2
+#define TIME_TO_SHAKE               2
+#define FLY_RATE                    200     // Flying rate in pixels per second
+#define STRENGTH_TO_OFFSET_RATIO    10      // 50 pixels per strength
 
 @interface ShakeCanViewController ()
 @property (nonatomic) CGAffineTransform leftWobble;
@@ -36,8 +38,6 @@
         
         self.isWobbling = NO;
         self.isShakable = YES;
-        
-
     }
     return self;
 }
@@ -47,8 +47,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self startTimer];
-
+    
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gradient.jpg"]];
+    [self.backgroundScrollView setBackgroundColor:[UIColor greenColor]];
     [self.backgroundScrollView setContentSize:CGSizeMake(320, 1200)];
     [self.backgroundScrollView addSubview:imageView];
     [self.backgroundScrollView setContentOffset:CGPointMake(0, 1200)];
@@ -105,22 +106,46 @@
 
 - (void) animateSodaCan
 {
-    [self scrollBackground];
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         NSLog(@"Firing can");
-                         self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, -200);
-                         NSLog(@"Firing can end");
-                     } completion:^(BOOL finished) {
-                         NSLog(@"Firing can complete");
-                     }];
+    if (self.shakeCount > 0) {
+        [self scrollBackground];
+        [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             NSLog(@"Firing can");
+                             self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, -200);
+                             NSLog(@"Firing can end");
+                         } completion:^(BOOL finished) {
+                             NSLog(@"Firing can complete");
+                         }];
+    }
     
 }
 - (void) scrollBackground {
-    [UIView animateWithDuration:2.0 delay:0.5 options:0 animations:^{
-        [self.backgroundScrollView setContentOffset:CGPointMake(0, 100)];
+    float offset = [self calculateOffsetFromStrength:self.shakeCount];
+    float duration = [self calculateDurationFromStrength:self.shakeCount];
+    
+    NSLog(@"Offset: %f (%f)", offset, duration);
+    
+    [UIView animateWithDuration:duration delay:0.5 options:0 animations:^{
+        [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
     } completion:^(BOOL finished) {
     }];
+}
+
+- (float) calculateOffsetFromStrength:(int) strength {
+    float offset = strength * STRENGTH_TO_OFFSET_RATIO;
+    
+    float max = 1200 - self.backgroundScrollView.frame.size.height;
+    if (offset >= max) {
+        return 0;
+    }
+    
+    return max-offset;
+}
+
+- (float) calculateDurationFromStrength:(int) strength {
+    float offset = strength * STRENGTH_TO_OFFSET_RATIO;
+    
+    return offset / FLY_RATE;
 }
 
 @end
