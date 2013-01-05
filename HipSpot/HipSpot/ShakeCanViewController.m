@@ -9,6 +9,7 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
+#define TIME_TO_SHAKE       9
 
 @interface ShakeCanViewController ()
 @property (nonatomic) CGAffineTransform leftWobble;
@@ -24,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.timerCount = 9;
+        self.timerCount = TIME_TO_SHAKE;
         self.shakeCount = 0;
         
         self.leftWobble = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(-10.0));
@@ -40,6 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self startTimer];
+    //[self reduceShake];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +71,7 @@
 - (IBAction)shake:(id)sender
 {
     self.shakeCount++;
+    self.shakeLabel.text = [NSString stringWithFormat:@"%i", self.shakeCount];
     
     if (!self.isAnimating) {
         self.isAnimating = YES;
