@@ -20,6 +20,7 @@
 		60AF85921698B5E80004AC79 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60AF85901698B5E80004AC79 /* ViewController.xib */; };
 		60AF859B1698B63C0004AC79 /* ShakeCanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AF85991698B63C0004AC79 /* ShakeCanViewController.m */; };
 		60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */; };
+		60AF859E1698C8770004AC79 /* gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859D1698C8770004AC79 /* gradient.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		60AF85981698B63C0004AC79 /* ShakeCanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeCanViewController.h; sourceTree = "<group>"; };
 		60AF85991698B63C0004AC79 /* ShakeCanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeCanViewController.m; sourceTree = "<group>"; };
 		60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShakeCanViewController.xib; sourceTree = "<group>"; };
+		60AF859D1698C8770004AC79 /* gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		60AF857B1698B5E80004AC79 /* HipSpot */ = {
 			isa = PBXGroup;
 			children = (
+				60AF859D1698C8770004AC79 /* gradient.jpg */,
 				60AF85841698B5E80004AC79 /* AppDelegate.h */,
 				60AF85851698B5E80004AC79 /* AppDelegate.m */,
 				60AF858D1698B5E80004AC79 /* ViewController.h */,
@@ -172,6 +175,7 @@
 				60AF858C1698B5E80004AC79 /* Default-568h@2x.png in Resources */,
 				60AF85921698B5E80004AC79 /* ViewController.xib in Resources */,
 				60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */,
+				60AF859E1698C8770004AC79 /* gradient.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

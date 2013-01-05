@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *timerLabel;
 @property (nonatomic, weak) IBOutlet UILabel *shakeLabel;
 @property (nonatomic, weak) IBOutlet UIView *sodaCanView;
+@property (nonatomic, weak) IBOutlet UIScrollView *backgroundScrollView;
 
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) int timerCount;

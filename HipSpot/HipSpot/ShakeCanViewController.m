@@ -9,13 +9,16 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
-#define TIME_TO_SHAKE       9
+#define TIME_TO_SHAKE       2
 
 @interface ShakeCanViewController ()
 @property (nonatomic) CGAffineTransform leftWobble;
 @property (nonatomic) CGAffineTransform rightWobble;
 
-@property (nonatomic) BOOL isAnimating;
+@property (nonatomic) BOOL isWobbling;
+@property (nonatomic) BOOL isShakable;
+
+@property (nonatomic, strong) NSTimer *backgroundScrollTimer;
 @end
 
 @implementation ShakeCanViewController
@@ -31,7 +34,10 @@
         self.leftWobble = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(-10.0));
         self.rightWobble = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(10.0));
         
-        self.isAnimating = NO;
+        self.isWobbling = NO;
+        self.isShakable = YES;
+        
+
     }
     return self;
 }
@@ -41,7 +47,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self startTimer];
-    //[self reduceShake];
+
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gradient.jpg"]];
+    [self.backgroundScrollView setContentSize:CGSizeMake(320, 1200)];
+    [self.backgroundScrollView addSubview:imageView];
+    [self.backgroundScrollView setContentOffset:CGPointMake(0, 1200)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,24 +75,52 @@
     
     if (self.timerCount == 0) {
         [self.timer invalidate];
+        self.isShakable = NO;
+        [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(animateSodaCan) userInfo:nil repeats:NO];
     }
 }
 
 - (IBAction)shake:(id)sender
 {
+    if (!self.isShakable) return;
+    
     self.shakeCount++;
     self.shakeLabel.text = [NSString stringWithFormat:@"%i", self.shakeCount];
     
-    if (!self.isAnimating) {
-        self.isAnimating = YES;
+    if (!self.isWobbling) {
+        self.isWobbling = YES;
         [UIView animateWithDuration:0.1 animations:^{
+            NSLog(@"Animating can");
             self.sodaCanView.transform = self.leftWobble;
             self.sodaCanView.transform = self.rightWobble;
+            NSLog(@"Animating can end");
         } completion:^(BOOL finished) {
             self.sodaCanView.transform = CGAffineTransformIdentity;
-            self.isAnimating = NO;
+            self.isWobbling = NO;
+            NSLog(@"Animating can completed");
         }];
     }
+}
+
+
+- (void) animateSodaCan
+{
+    [self scrollBackground];
+    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         NSLog(@"Firing can");
+                         self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, -200);
+                         NSLog(@"Firing can end");
+                     } completion:^(BOOL finished) {
+                         NSLog(@"Firing can complete");
+                     }];
+    
+}
+- (void) scrollBackground {
+    [UIView animateWithDuration:2.0 delay:0.5 options:0 animations:^{
+        [self.backgroundScrollView setContentOffset:CGPointMake(0, 100)];
+    } completion:^(BOOL finished) {
+    }];
 }
 
 @end
