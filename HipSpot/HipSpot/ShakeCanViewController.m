@@ -8,7 +8,13 @@
 
 #import "ShakeCanViewController.h"
 
+#define RADIANS(degrees) ((degrees * M_PI) / 180.0)
+
 @interface ShakeCanViewController ()
+@property (nonatomic) CGAffineTransform leftWobble;
+@property (nonatomic) CGAffineTransform rightWobble;
+
+@property (nonatomic) BOOL isAnimating;
 @end
 
 @implementation ShakeCanViewController
@@ -19,6 +25,12 @@
     if (self) {
         // Custom initialization
         self.timerCount = 9;
+        self.shakeCount = 0;
+        
+        self.leftWobble = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(-10.0));
+        self.rightWobble = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(10.0));
+        
+        self.isAnimating = NO;
     }
     return self;
 }
@@ -56,7 +68,18 @@
 
 - (IBAction)shake:(id)sender
 {
+    self.shakeCount++;
     
+    if (!self.isAnimating) {
+        self.isAnimating = YES;
+        [UIView animateWithDuration:0.1 animations:^{
+            self.sodaCanView.transform = self.leftWobble;
+            self.sodaCanView.transform = self.rightWobble;
+        } completion:^(BOOL finished) {
+            self.sodaCanView.transform = CGAffineTransformIdentity;
+            self.isAnimating = NO;
+        }];
+    }
 }
 
 @end

@@ -11,7 +11,7 @@
 @interface ShakeCanViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *timerLabel;
-@property (nonatomic, weak) IBOutlet UIView *shakeCanView;
+@property (nonatomic, weak) IBOutlet UIView *sodaCanView;
 
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) int timerCount;

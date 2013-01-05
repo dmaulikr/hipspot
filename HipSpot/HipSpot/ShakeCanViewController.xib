@@ -36,7 +36,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUILabel" id="718375132">
+					<object class="IBUILabel" id="524034869">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{290, 20}, {10, 21}}</string>
@@ -67,7 +67,7 @@
 						</object>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
-					<object class="IBUIButton" id="66010829">
+					<object class="IBUIButton" id="237486566">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{229, 397}, {69, 44}}</string>
@@ -102,7 +102,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIView" id="346812331">
+					<object class="IBUIView" id="1065086785">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{116, 166}, {89, 127}}</string>
@@ -161,17 +161,26 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">timerLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="718375132"/>
+						<reference key="destination" ref="524034869"/>
 					</object>
 					<int key="connectionID">9</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">shakeCanView</string>
+						<string key="label">sodaCanView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="346812331"/>
+						<reference key="destination" ref="1065086785"/>
 					</object>
-					<int key="connectionID">10</int>
+					<int key="connectionID">11</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">shake:</string>
+						<reference key="source" ref="237486566"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">12</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -186,9 +195,9 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="718375132"/>
-							<reference ref="66010829"/>
-							<reference ref="346812331"/>
+							<reference ref="524034869"/>
+							<reference ref="237486566"/>
+							<reference ref="1065086785"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -205,17 +214,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="718375132"/>
+						<reference key="object" ref="524034869"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="66010829"/>
+						<reference key="object" ref="237486566"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="346812331"/>
+						<reference key="object" ref="1065086785"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -234,20 +243,31 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">10</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">ShakeCanViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">shake:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">shake:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">shake:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="shakeCanView">UIView</string>
+						<string key="sodaCanView">UIView</string>
 						<string key="timerLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="shakeCanView">
-							<string key="name">shakeCanView</string>
+						<object class="IBToOneOutletInfo" key="sodaCanView">
+							<string key="name">sodaCanView</string>
 							<string key="candidateClassName">UIView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="timerLabel">
