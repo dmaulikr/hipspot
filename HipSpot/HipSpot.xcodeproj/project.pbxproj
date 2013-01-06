@@ -13,6 +13,7 @@
 		60475ABC1698DA0B00C28D67 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60475ABA1698DA0B00C28D67 /* NearbyViewController.m */; };
 		60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */; };
 		60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475AC71698F1D200C28D67 /* NearbyViewCell.xib */; };
+		60475ACF1698F84700C28D67 /* Barthowheel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60475ACE1698F84700C28D67 /* Barthowheel.ttf */; };
 		60AF85761698B5E80004AC79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85751698B5E80004AC79 /* UIKit.framework */; };
 		60AF85781698B5E80004AC79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85771698B5E80004AC79 /* Foundation.framework */; };
 		60AF857A1698B5E80004AC79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85791698B5E80004AC79 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 		60475ABA1698DA0B00C28D67 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
 		60475AC71698F1D200C28D67 /* NearbyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewCell.xib; sourceTree = "<group>"; };
+		60475ACE1698F84700C28D67 /* Barthowheel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Barthowheel.ttf; sourceTree = "<group>"; };
 		60AF85711698B5E80004AC79 /* HipSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AF85751698B5E80004AC79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60AF85771698B5E80004AC79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +132,7 @@
 				6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */,
 				6D8A8A311698F7C9008DE899 /* sodacan.png */,
 				6D8A8A321698F7C9008DE899 /* sodacan@2x.png */,
+				60475ACE1698F84700C28D67 /* Barthowheel.ttf */,
 				60475AAB1698D89F00C28D67 /* BZFoursquare */,
 				60AF859D1698C8770004AC79 /* gradient.jpg */,
 				60AF85841698B5E80004AC79 /* AppDelegate.h */,
@@ -227,6 +230,7 @@
 				6D8A8A341698F7CB008DE899 /* sodacan@2x.png in Resources */,
 				60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */,
 				60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */,
+				60475ACF1698F84700C28D67 /* Barthowheel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
