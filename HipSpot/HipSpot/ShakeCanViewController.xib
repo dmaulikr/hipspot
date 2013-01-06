@@ -108,7 +108,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 408}, {99, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="1066242893"/>
+						<reference key="NSNextKeyView" ref="897623959"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -135,7 +135,7 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIImageView" id="1066242893">
+					<object class="IBUIImageView" id="897623959">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{129, 277}, {62, 118}}</string>
@@ -218,7 +218,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">sodaCanView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1066242893"/>
+						<reference key="destination" ref="897623959"/>
 					</object>
 					<int key="connectionID">23</int>
 				</object>
@@ -248,7 +248,7 @@
 							<reference ref="1073484088"/>
 							<reference ref="605300358"/>
 							<reference ref="277083629"/>
-							<reference ref="1066242893"/>
+							<reference ref="897623959"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -286,7 +286,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="1066242893"/>
+						<reference key="object" ref="897623959"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -316,7 +316,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">sodacan.png</string>
-			<string key="NS.object.0">{62, 118}</string>
+			<string key="NS.object.0">{16, 16}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>

@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "ShakeCanViewController.h"
+#import "NearbyViewController.h"
 
 @implementation AppDelegate
 
@@ -22,9 +23,14 @@
     self.window.rootViewController = self.viewController;
      */
     
-    UIViewController *viewController = [[ShakeCanViewController alloc] initWithNibName:@"ShakeCanViewController" bundle:[NSBundle mainBundle]];
-    self.window.rootViewController = viewController;
+    //UIViewController *viewController = [[ShakeCanViewController alloc] initWithNibName:@"ShakeCanViewController" bundle:[NSBundle mainBundle]];
+    UIViewController *viewController = [[NearbyViewController alloc] initWithNibName:@"NearbyViewController" bundle:[NSBundle mainBundle]];
     
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navController;
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -54,6 +60,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    NearbyViewController *masterViewController = [navigationController.viewControllers objectAtIndex:0];
+    BZFoursquare *foursquare = masterViewController.fourSquare;
+    return [foursquare handleOpenURL:url];
 }
 
 @end
