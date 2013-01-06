@@ -9,7 +9,9 @@
 #import "LaunchGameViewController.h"
 #import "ShakeCanViewController.h"
 
-@interface LaunchGameViewController ()
+@interface LaunchGameViewController () {
+    IBOutlet UILabel *label;
+}
 
 @end
 
@@ -41,6 +43,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    label.font = [UIFont fontWithName:@"Barthowheel" size:24];
 }
 
 - (void)didReceiveMemoryWarning

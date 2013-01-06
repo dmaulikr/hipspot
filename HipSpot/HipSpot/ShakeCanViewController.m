@@ -9,12 +9,13 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
-#define TIME_TO_SHAKE               40
+#define TIME_TO_SHAKE               60
 #define FLY_RATE                    200     // Flying rate in pixels per second
 #define STRENGTH_TO_OFFSET_RATIO    50      // 10 pixels per strength
 
 @interface ShakeCanViewController () {
     IBOutlet UIImageView *gameText;
+    IBOutlet UIButton *endGame;
 }
 @property (nonatomic) CGAffineTransform leftWobble;
 @property (nonatomic) CGAffineTransform rightWobble;
@@ -56,6 +57,8 @@
     [self.backgroundScrollView setContentSize:CGSizeMake(320, max)];
     [self.backgroundScrollView addSubview:imageView];
     [self.backgroundScrollView setContentOffset:CGPointMake(0, max)];
+    
+    self.timerLabel.font = [UIFont fontWithName:@"Barthowheel" size:64];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,6 +86,10 @@
         self.sodaCanView.transform = CGAffineTransformMakeRotation(RADIANS(180));
         [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(animateSodaCan) userInfo:nil repeats:NO];
     }
+}
+
+- (IBAction)endGame:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)shake:(id)sender
@@ -162,7 +169,25 @@
 #pragma mark - YangShun's Callback
 - (void) gameEnded
 {
-    NSLog(@"game ended");
+    self.backgroundScrollView.alpha = 0.5f;
+    [UIView animateWithDuration:0.5f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         endGame.center = CGPointMake(120, 240);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.2f
+                                               delay:0.0f
+                                             options:UIViewAnimationOptionCurveEaseOut
+                                          animations:^{
+                                              
+                                              endGame.center = CGPointMake(160, 240);
+                                          }
+                                          completion:^(BOOL finished) {
+                                              
+                                          }];
+                     }];
 }
 
 @end
