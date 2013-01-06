@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "NearbyViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    IBOutlet UIImageView *logo;
+}
 
 @end
 
@@ -18,7 +20,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    logo.transform = CGAffineTransformMakeScale(0.1, 0.1);
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [UIView animateWithDuration:0.7f animations:^{
+        logo.transform = CGAffineTransformMakeScale(1.15, 1.15);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.15f animations:^{
+            logo.transform = CGAffineTransformMakeScale(1, 1);
+        } completion:^(BOOL finished) {
+            
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
