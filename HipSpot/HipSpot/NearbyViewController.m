@@ -101,7 +101,7 @@
             UILabel *label = (UILabel*) view;
             switch (label.tag) {
                 case 0:
-                    label.font = [UIFont fontWithName:@"Barthowheel" size:28];
+                    label.font = [UIFont fontWithName:@"Barthowheel" size:24];
                     label.text = data.name;
                     break;
                 case 1:
