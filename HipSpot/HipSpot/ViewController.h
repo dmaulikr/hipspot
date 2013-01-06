@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BZFoursquare.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) BZFoursquare *fourSquare;
 
 - (IBAction)showNearby:(id)sender;
 

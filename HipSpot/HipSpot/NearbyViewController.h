@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BZFoursquare.h"
 
-@interface NearbyViewController : UIViewController<BZFoursquareSessionDelegate,BZFoursquareRequestDelegate>
+@interface NearbyViewController : UIViewController<BZFoursquareRequestDelegate, BZFoursquareSessionDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *nearbyTableView;
-@property (nonatomic, strong) BZFoursquare *fourSquare;
 @end

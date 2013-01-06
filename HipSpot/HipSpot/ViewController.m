@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "NearbyViewController.h"
 
+#define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
+#define FS_CALLBACK @"hipspot://foursquare"
+
 @interface ViewController () {
     IBOutlet UIImageView *logo;
 }
@@ -20,6 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     
     logo.transform = CGAffineTransformMakeScale(0.1, 0.1);
 	// Do any additional setup after loading the view, typically from a nib.
@@ -47,6 +52,13 @@
 - (IBAction)showNearby:(id)sender
 {
     NearbyViewController *nearbyController = [[NearbyViewController alloc] initWithNibName:@"NearbyViewController" bundle:[NSBundle mainBundle]];
+    self.fourSquare = [[BZFoursquare alloc] initWithClientID:FS_CLIENTID callbackURL:FS_CALLBACK];
+    self.fourSquare.sessionDelegate = nearbyController;
+    self.fourSquare.version = @"20130105";
+    
+    if (![self.fourSquare isSessionValid]) {
+        [self.fourSquare startAuthorization];
+    }
     
     [self.navigationController pushViewController:nearbyController animated:YES];
 }

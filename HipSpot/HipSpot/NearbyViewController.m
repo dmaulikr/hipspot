@@ -7,10 +7,8 @@
 //
 
 #import "NearbyViewController.h"
+#import "ViewController.h"
 #import "LaunchGameViewController.h"
-
-#define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
-#define FS_CALLBACK @"hipspot://foursquare"
 
 @interface NearbyViewController ()
 @property (nonatomic, strong) NSArray *locationsData;
@@ -46,13 +44,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.fourSquare = [[BZFoursquare alloc] initWithClientID:FS_CLIENTID callbackURL:FS_CALLBACK];
-    self.fourSquare.sessionDelegate = self;
-    self.fourSquare.version = @"20130105";
-    
-    if (![self.fourSquare isSessionValid]) {
-        [self.fourSquare startAuthorization];
-    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -166,7 +158,10 @@
     params[@"ll"] = @"37.785834,-122.406417";
     params[@"radius"] = @"250";
     
-    BZFoursquareRequest *request = [self.fourSquare requestWithPath:@"venues/explore" HTTPMethod:@"GET" parameters:params delegate:self];
+    UINavigationController *navigationController = self.navigationController;
+    ViewController *viewController = [navigationController.viewControllers objectAtIndex:0];
+    
+    BZFoursquareRequest *request = [viewController.fourSquare requestWithPath:@"venues/explore" HTTPMethod:@"GET" parameters:params delegate:self];
     [request start];
 }
 
