@@ -12,7 +12,9 @@
 #define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
 #define FS_CALLBACK @"hipspot://foursquare"
 
-@interface NearbyViewController ()
+@interface NearbyViewController () {
+    IBOutlet UIActivityIndicatorView *indicator;
+}
 @property (nonatomic, strong) NSArray *locationsData;
 @end
 
@@ -53,12 +55,18 @@
     if (![self.fourSquare isSessionValid]) {
         [self.fourSquare startAuthorization];
     }
+    self.nearbyTableView.hidden = YES;
+    [indicator startAnimating];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table Delegate
@@ -129,6 +137,10 @@
 {
     self.locationsData = [self getLocationDataFromResponse:request.response];
     [self.nearbyTableView reloadData];
+    [indicator stopAnimating];
+    indicator.hidden = YES;
+    self.nearbyTableView.hidden = NO;
+    
 }
 
 - (NSArray*) getLocationDataFromResponse:(NSDictionary*)response

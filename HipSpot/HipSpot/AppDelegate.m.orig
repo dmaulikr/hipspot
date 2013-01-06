@@ -19,7 +19,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+<<<<<<< HEAD
+//    UIViewController *viewController = [[ShakeCanViewController alloc] initWithNibName:@"ShakeCanViewController" bundle:[NSBundle mainBundle]];
+=======
     //UIViewController *viewController = [[ShakeCanViewController alloc] initWithNibName:@"ShakeCanViewController" bundle:[NSBundle mainBundle]];
+>>>>>>> 1375819e7de0110bf62efe042ee8c366a7f3491a
     //UIViewController *viewController = [[NearbyViewController alloc] initWithNibName:@"NearbyViewController" bundle:[NSBundle mainBundle]];
     UIViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:[NSBundle mainBundle]];
     

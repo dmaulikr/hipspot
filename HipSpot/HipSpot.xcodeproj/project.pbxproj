@@ -38,6 +38,10 @@
 		6D8A8A3E16990384008DE899 /* login-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3A16990383008DE899 /* login-bg@2x.png */; };
 		6D8A8A3F16990384008DE899 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3B16990383008DE899 /* logo.png */; };
 		6D8A8A4016990384008DE899 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3C16990383008DE899 /* logo@2x.png */; };
+		6D8A8A4816991302008DE899 /* nearby.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A4616991301008DE899 /* nearby.png */; };
+		6D8A8A4916991302008DE899 /* nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A4716991301008DE899 /* nearby@2x.png */; };
+		6D8A8A4D1699181A008DE899 /* launchgame.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A4B16991816008DE899 /* launchgame.png */; };
+		6D8A8A4E1699181A008DE899 /* launchgame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A4C16991819008DE899 /* launchgame@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		6D8A8A3A16990383008DE899 /* login-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg@2x.png"; sourceTree = "<group>"; };
 		6D8A8A3B16990383008DE899 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6D8A8A3C16990383008DE899 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		6D8A8A4616991301008DE899 /* nearby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nearby.png; sourceTree = "<group>"; };
+		6D8A8A4716991301008DE899 /* nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby@2x.png"; sourceTree = "<group>"; };
+		6D8A8A4B16991816008DE899 /* launchgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchgame.png; sourceTree = "<group>"; };
+		6D8A8A4C16991819008DE899 /* launchgame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchgame@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,10 @@
 				6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */,
 				6D8A8A311698F7C9008DE899 /* sodacan.png */,
 				6D8A8A321698F7C9008DE899 /* sodacan@2x.png */,
+				6D8A8A4616991301008DE899 /* nearby.png */,
+				6D8A8A4716991301008DE899 /* nearby@2x.png */,
+				6D8A8A4B16991816008DE899 /* launchgame.png */,
+				6D8A8A4C16991819008DE899 /* launchgame@2x.png */,
 				60475ACE1698F84700C28D67 /* Barthowheel.ttf */,
 				60475AAB1698D89F00C28D67 /* BZFoursquare */,
 				60AF859D1698C8770004AC79 /* gradient.jpg */,
@@ -256,6 +268,10 @@
 				6D8A8A3E16990384008DE899 /* login-bg@2x.png in Resources */,
 				6D8A8A3F16990384008DE899 /* logo.png in Resources */,
 				6D8A8A4016990384008DE899 /* logo@2x.png in Resources */,
+				6D8A8A4816991302008DE899 /* nearby.png in Resources */,
+				6D8A8A4916991302008DE899 /* nearby@2x.png in Resources */,
+				6D8A8A4D1699181A008DE899 /* launchgame.png in Resources */,
+				6D8A8A4E1699181A008DE899 /* launchgame@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

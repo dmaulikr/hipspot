@@ -28,12 +28,14 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [UIView animateWithDuration:0.7f animations:^{
-        logo.transform = CGAffineTransformMakeScale(1.15, 1.15);
+        logo.transform = CGAffineTransformMakeScale(1.10, 1.10);
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.15f animations:^{
+        [UIView animateWithDuration:0.5f
+                              delay:0.0f
+                            options: UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat
+                         animations:^{
             logo.transform = CGAffineTransformMakeScale(1, 1);
         } completion:^(BOOL finished) {
-            
         }];
     }];
 }
