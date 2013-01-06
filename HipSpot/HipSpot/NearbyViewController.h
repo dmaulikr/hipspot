@@ -12,4 +12,5 @@
 @interface NearbyViewController : UIViewController<BZFoursquareRequestDelegate, BZFoursquareSessionDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *nearbyTableView;
+@property (nonatomic, weak) IBOutlet UILabel *hipScore;
 @end
