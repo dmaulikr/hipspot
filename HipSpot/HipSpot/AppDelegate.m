@@ -62,7 +62,7 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    NearbyViewController *masterViewController = [navigationController.viewControllers objectAtIndex:1];
+    ViewController *masterViewController = [navigationController.viewControllers objectAtIndex:0];
     BZFoursquare *foursquare = masterViewController.fourSquare;
     return [foursquare handleOpenURL:url];
 }

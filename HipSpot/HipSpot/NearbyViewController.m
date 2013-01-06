@@ -7,10 +7,9 @@
 //
 
 #import "NearbyViewController.h"
+#import "ViewController.h"
 #import "LaunchGameViewController.h"
-
-#define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
-#define FS_CALLBACK @"hipspot://foursquare"
+#import "UIImageView+JMImageCache.h"
 
 @interface NearbyViewController () {
     IBOutlet UIActivityIndicatorView *indicator;
@@ -48,15 +47,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.fourSquare = [[BZFoursquare alloc] initWithClientID:FS_CLIENTID callbackURL:FS_CALLBACK];
-    self.fourSquare.sessionDelegate = self;
-    self.fourSquare.version = @"20130105";
-    
-    if (![self.fourSquare isSessionValid]) {
-        [self.fourSquare startAuthorization];
-    }
-    self.nearbyTableView.hidden = YES;
-    [indicator startAnimating];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,15 +93,11 @@
     int index = indexPath.row;
     LocationData *data = self.locationsData[index];
     for (UIView *view in cell.contentView.subviews) {
-        /*
         if ([view isKindOfClass:[UIImageView class]]) {
             UIImageView *imageView = (UIImageView*)view;
-            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:data.imageURL]];
-            imageView.image = [UIImage imageWithData:imageData];
+            [imageView setImageWithURL:[NSURL URLWithString:data.imageURL]];
         }
-        else 
-         */
-        if ([view isKindOfClass:[UILabel class]]) {
+        else if ([view isKindOfClass:[UILabel class]]) {
             UILabel *label = (UILabel*) view;
             switch (label.tag) {
                 case 0:
@@ -178,7 +165,10 @@
     params[@"ll"] = @"37.785834,-122.406417";
     params[@"radius"] = @"250";
     
-    BZFoursquareRequest *request = [self.fourSquare requestWithPath:@"venues/explore" HTTPMethod:@"GET" parameters:params delegate:self];
+    UINavigationController *navigationController = self.navigationController;
+    ViewController *viewController = [navigationController.viewControllers objectAtIndex:0];
+    
+    BZFoursquareRequest *request = [viewController.fourSquare requestWithPath:@"venues/explore" HTTPMethod:@"GET" parameters:params delegate:self];
     [request start];
 }
 
