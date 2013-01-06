@@ -9,7 +9,7 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
-#define TIME_TO_SHAKE               2
+#define TIME_TO_SHAKE               100     
 #define FLY_RATE                    200     // Flying rate in pixels per second
 #define STRENGTH_TO_OFFSET_RATIO    10      // 50 pixels per strength
 
@@ -48,8 +48,8 @@
     // Do any additional setup after loading the view from its nib.
     [self startTimer];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gradient.jpg"]];
-    [self.backgroundScrollView setBackgroundColor:[UIColor greenColor]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall"]];
+    [self.backgroundScrollView setBackgroundColor:[UIColor blackColor]];
     [self.backgroundScrollView setContentSize:CGSizeMake(320, 1200)];
     [self.backgroundScrollView addSubview:imageView];
     [self.backgroundScrollView setContentOffset:CGPointMake(0, 1200)];
@@ -65,14 +65,14 @@
 
 - (void) startTimer
 {
-    self.timerLabel.text = [NSString stringWithFormat:@"%i", self.timerCount];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tickTimer) userInfo:nil repeats:YES];
+    self.timerLabel.text = [NSString stringWithFormat:@"%d.%d", self.timerCount/10, self.timerCount%10];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(tickTimer) userInfo:nil repeats:YES];
 }
 
 - (void) tickTimer
 {
     self.timerCount--;
-    self.timerLabel.text = [NSString stringWithFormat:@"%i", self.timerCount];
+    self.timerLabel.text = [NSString stringWithFormat:@"%d.%d", self.timerCount/10, self.timerCount%10];
     
     if (self.timerCount == 0) {
         [self.timer invalidate];

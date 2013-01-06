@@ -21,6 +21,10 @@
 		60AF859B1698B63C0004AC79 /* ShakeCanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AF85991698B63C0004AC79 /* ShakeCanViewController.m */; };
 		60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */; };
 		60AF859E1698C8770004AC79 /* gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859D1698C8770004AC79 /* gradient.jpg */; };
+		6D8A8A2E1698F4AF008DE899 /* wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2C1698F4AC008DE899 /* wall.jpg */; };
+		6D8A8A2F1698F4AF008DE899 /* wall@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */; };
+		6D8A8A331698F7CB008DE899 /* sodacan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A311698F7C9008DE899 /* sodacan.png */; };
+		6D8A8A341698F7CB008DE899 /* sodacan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A321698F7C9008DE899 /* sodacan@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		60AF85991698B63C0004AC79 /* ShakeCanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeCanViewController.m; sourceTree = "<group>"; };
 		60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShakeCanViewController.xib; sourceTree = "<group>"; };
 		60AF859D1698C8770004AC79 /* gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient.jpg; sourceTree = "<group>"; };
+		6D8A8A2C1698F4AC008DE899 /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall@2x.jpg"; sourceTree = "<group>"; };
+		6D8A8A311698F7C9008DE899 /* sodacan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sodacan.png; sourceTree = "<group>"; };
+		6D8A8A321698F7C9008DE899 /* sodacan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sodacan@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		60AF857B1698B5E80004AC79 /* HipSpot */ = {
 			isa = PBXGroup;
 			children = (
+				6D8A8A2C1698F4AC008DE899 /* wall.jpg */,
+				6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */,
+				6D8A8A311698F7C9008DE899 /* sodacan.png */,
+				6D8A8A321698F7C9008DE899 /* sodacan@2x.png */,
 				60AF859D1698C8770004AC79 /* gradient.jpg */,
 				60AF85841698B5E80004AC79 /* AppDelegate.h */,
 				60AF85851698B5E80004AC79 /* AppDelegate.m */,
@@ -176,6 +188,10 @@
 				60AF85921698B5E80004AC79 /* ViewController.xib in Resources */,
 				60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */,
 				60AF859E1698C8770004AC79 /* gradient.jpg in Resources */,
+				6D8A8A2E1698F4AF008DE899 /* wall.jpg in Resources */,
+				6D8A8A2F1698F4AF008DE899 /* wall@2x.jpg in Resources */,
+				6D8A8A331698F7CB008DE899 /* sodacan.png in Resources */,
+				6D8A8A341698F7CB008DE899 /* sodacan@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +322,7 @@
 				60AF85971698B5E80004AC79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
