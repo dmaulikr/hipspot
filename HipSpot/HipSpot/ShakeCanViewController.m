@@ -122,21 +122,18 @@
     }
     
 }
+
 - (void) scrollBackground {
     float offset = [self calculateOffsetFromStrength:self.shakeCount];
     float duration = [self calculateDurationFromStrength:self.shakeCount];
     
-    [UIView animateWithDuration:duration delay:0.5 options:0 animations:^{
+    [UIView animateWithDuration:duration delay:0 options:0 animations:^{
         [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:duration delay:1 options:0 animations:^{
-            self.sodaCanView.transform = CGAffineTransformMakeRotation(RADIANS(180));
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+            [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
                              animations:^{
                                  self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, 1000);
                              } completion:^(BOOL finished) {
-                             }];
         }];
     }];
 }

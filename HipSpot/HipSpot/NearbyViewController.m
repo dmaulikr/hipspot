@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    self.hipScore.font = [UIFont fontWithName:@"Barthowheel" size:25];
 }
 
 - (void)didReceiveMemoryWarning
@@ -143,10 +143,10 @@
         locationData.distance = [item[@"venue"][@"location"][@"distance"] integerValue];
         
         NSString *prefix = item[@"venue"][@"categories"][0][@"icon"][@"prefix"];
-        prefix = [prefix substringToIndex:prefix.length-1];
 
-        locationData.imageURL = [NSString stringWithFormat:@"%@%@",
+        locationData.imageURL = [NSString stringWithFormat:@"%@%i%@",
                                  prefix,
+                                 64,
                                  item[@"venue"][@"categories"][0][@"icon"][@"suffix"]];
         
         [locationsData addObject:locationData];
