@@ -9,9 +9,9 @@
 #import "ShakeCanViewController.h"
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
-#define TIME_TO_SHAKE               100     
+#define TIME_TO_SHAKE               40
 #define FLY_RATE                    200     // Flying rate in pixels per second
-#define STRENGTH_TO_OFFSET_RATIO    10      // 50 pixels per strength
+#define STRENGTH_TO_OFFSET_RATIO    10      // 10 pixels per strength
 
 @interface ShakeCanViewController ()
 @property (nonatomic) CGAffineTransform leftWobble;
@@ -78,6 +78,7 @@
     if (self.timerCount == 0) {
         [self.timer invalidate];
         self.isShakable = NO;
+        self.sodaCanView.transform = CGAffineTransformMakeRotation(RADIANS(180));
         [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(animateSodaCan) userInfo:nil repeats:NO];
     }
 }
@@ -121,6 +122,17 @@
     [UIView animateWithDuration:duration delay:0.5 options:0 animations:^{
         [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
     } completion:^(BOOL finished) {
+        [UIView animateWithDuration:duration delay:1 options:0 animations:^{
+            float max = 1200 - self.backgroundScrollView.frame.size.height;
+            [self.backgroundScrollView setContentOffset:CGPointMake(0, max)];
+            self.sodaCanView.transform = CGAffineTransformMakeRotation(RADIANS(180));
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                                 self.sodaCanView.transform = CGAffineTransformIdentity;
+                             } completion:^(BOOL finished) {
+                             }];
+        }];
     }];
 }
 
