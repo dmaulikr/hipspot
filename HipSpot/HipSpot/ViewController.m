@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NearbyViewController.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showNearby:(id)sender
+{
+    NearbyViewController *nearbyController = [[NearbyViewController alloc] initWithNibName:@"NearbyViewController" bundle:[NSBundle mainBundle]];
+    
+    [self.navigationController pushViewController:nearbyController animated:YES];
 }
 
 @end

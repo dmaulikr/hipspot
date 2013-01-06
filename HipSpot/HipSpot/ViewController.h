@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)showNearby:(id)sender;
+
 @end
