@@ -148,12 +148,12 @@
     [UIView animateWithDuration:duration delay:0 options:0 animations:^{
         [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
     } completion:^(BOOL finished) {
-            [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+        [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
                              animations:^{
                                  self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, 1000);
                              } completion:^(BOOL finished) {
-                                 [self gameEnded];
                             }];
+        [self gameEnded];
     }];
 }
 
