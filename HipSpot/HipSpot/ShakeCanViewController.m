@@ -56,6 +56,11 @@
     [self.backgroundScrollView setContentSize:CGSizeMake(320, max)];
     [self.backgroundScrollView addSubview:imageView];
     [self.backgroundScrollView setContentOffset:CGPointMake(0, max)];
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat animations:^{
+        gameText.transform = CGAffineTransformMakeScale(1.1, 1.1);
+    } completion:^(BOOL finished) {
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,6 +127,9 @@
                              self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, -200);
                          } completion:^(BOOL finished) {
                          }];
+    }
+    else {
+        [self gameEnded];
     }
     
 }
