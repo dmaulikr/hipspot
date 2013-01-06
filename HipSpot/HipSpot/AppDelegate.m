@@ -24,7 +24,7 @@
     UIViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:[NSBundle mainBundle]];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navController.navigationBarHidden = YES;
+   // navController.navigationBarHidden = YES;
     self.window.rootViewController = navController;
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];

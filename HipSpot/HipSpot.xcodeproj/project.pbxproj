@@ -30,6 +30,8 @@
 		60AF859B1698B63C0004AC79 /* ShakeCanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AF85991698B63C0004AC79 /* ShakeCanViewController.m */; };
 		60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */; };
 		60AF859E1698C8770004AC79 /* gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859D1698C8770004AC79 /* gradient.jpg */; };
+		60EC3BA7169919A200363C7B /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3BA4169919A200363C7B /* JMImageCache.m */; };
+		60EC3BA8169919A200363C7B /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3BA6169919A200363C7B /* UIImageView+JMImageCache.m */; };
 		6D8A8A2E1698F4AF008DE899 /* wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2C1698F4AC008DE899 /* wall.jpg */; };
 		6D8A8A2F1698F4AF008DE899 /* wall@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */; };
 		6D8A8A331698F7CB008DE899 /* sodacan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A311698F7C9008DE899 /* sodacan.png */; };
@@ -74,6 +76,10 @@
 		60AF85991698B63C0004AC79 /* ShakeCanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeCanViewController.m; sourceTree = "<group>"; };
 		60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShakeCanViewController.xib; sourceTree = "<group>"; };
 		60AF859D1698C8770004AC79 /* gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gradient.jpg; sourceTree = "<group>"; };
+		60EC3BA3169919A200363C7B /* JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMImageCache.h; sourceTree = "<group>"; };
+		60EC3BA4169919A200363C7B /* JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMImageCache.m; sourceTree = "<group>"; };
+		60EC3BA5169919A200363C7B /* UIImageView+JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JMImageCache.h"; sourceTree = "<group>"; };
+		60EC3BA6169919A200363C7B /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
 		6D8A8A2C1698F4AC008DE899 /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 		6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall@2x.jpg"; sourceTree = "<group>"; };
 		6D8A8A311698F7C9008DE899 /* sodacan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sodacan.png; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		60AF857B1698B5E80004AC79 /* HipSpot */ = {
 			isa = PBXGroup;
 			children = (
+				60EC3BA2169919A200363C7B /* JMImageCache */,
 				6D8A8A3916990383008DE899 /* login-bg.png */,
 				6D8A8A3A16990383008DE899 /* login-bg@2x.png */,
 				6D8A8A3B16990383008DE899 /* logo.png */,
@@ -184,6 +191,17 @@
 				60AF858B1698B5E80004AC79 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60EC3BA2169919A200363C7B /* JMImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				60EC3BA3169919A200363C7B /* JMImageCache.h */,
+				60EC3BA4169919A200363C7B /* JMImageCache.m */,
+				60EC3BA5169919A200363C7B /* UIImageView+JMImageCache.h */,
+				60EC3BA6169919A200363C7B /* UIImageView+JMImageCache.m */,
+			);
+			path = JMImageCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +292,8 @@
 				60475AB11698D89F00C28D67 /* BZFoursquareRequest.m in Sources */,
 				60475ABC1698DA0B00C28D67 /* NearbyViewController.m in Sources */,
 				60475ADB1699074A00C28D67 /* LaunchGameViewController.m in Sources */,
+				60EC3BA7169919A200363C7B /* JMImageCache.m in Sources */,
+				60EC3BA8169919A200363C7B /* UIImageView+JMImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

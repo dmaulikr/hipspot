@@ -9,6 +9,7 @@
 #import "NearbyViewController.h"
 #import "ViewController.h"
 #import "LaunchGameViewController.h"
+#import "UIImageView+JMImageCache.h"
 
 @interface NearbyViewController ()
 @property (nonatomic, strong) NSArray *locationsData;
@@ -86,15 +87,11 @@
     int index = indexPath.row;
     LocationData *data = self.locationsData[index];
     for (UIView *view in cell.contentView.subviews) {
-        /*
         if ([view isKindOfClass:[UIImageView class]]) {
             UIImageView *imageView = (UIImageView*)view;
-            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:data.imageURL]];
-            imageView.image = [UIImage imageWithData:imageData];
+            [imageView setImageWithURL:[NSURL URLWithString:data.imageURL]];
         }
-        else 
-         */
-        if ([view isKindOfClass:[UILabel class]]) {
+        else if ([view isKindOfClass:[UILabel class]]) {
             UILabel *label = (UILabel*) view;
             switch (label.tag) {
                 case 0:
