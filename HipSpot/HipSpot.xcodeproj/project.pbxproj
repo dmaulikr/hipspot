@@ -32,6 +32,10 @@
 		6D8A8A2F1698F4AF008DE899 /* wall@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */; };
 		6D8A8A331698F7CB008DE899 /* sodacan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A311698F7C9008DE899 /* sodacan.png */; };
 		6D8A8A341698F7CB008DE899 /* sodacan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A321698F7C9008DE899 /* sodacan@2x.png */; };
+		6D8A8A3D16990384008DE899 /* login-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3916990383008DE899 /* login-bg.png */; };
+		6D8A8A3E16990384008DE899 /* login-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3A16990383008DE899 /* login-bg@2x.png */; };
+		6D8A8A3F16990384008DE899 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3B16990383008DE899 /* logo.png */; };
+		6D8A8A4016990384008DE899 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A3C16990383008DE899 /* logo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall@2x.jpg"; sourceTree = "<group>"; };
 		6D8A8A311698F7C9008DE899 /* sodacan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sodacan.png; sourceTree = "<group>"; };
 		6D8A8A321698F7C9008DE899 /* sodacan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sodacan@2x.png"; sourceTree = "<group>"; };
+		6D8A8A3916990383008DE899 /* login-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg.png"; sourceTree = "<group>"; };
+		6D8A8A3A16990383008DE899 /* login-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg@2x.png"; sourceTree = "<group>"; };
+		6D8A8A3B16990383008DE899 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		6D8A8A3C16990383008DE899 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 		60AF857B1698B5E80004AC79 /* HipSpot */ = {
 			isa = PBXGroup;
 			children = (
+				6D8A8A3916990383008DE899 /* login-bg.png */,
+				6D8A8A3A16990383008DE899 /* login-bg@2x.png */,
+				6D8A8A3B16990383008DE899 /* logo.png */,
+				6D8A8A3C16990383008DE899 /* logo@2x.png */,
 				6D8A8A2C1698F4AC008DE899 /* wall.jpg */,
 				6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */,
 				6D8A8A311698F7C9008DE899 /* sodacan.png */,
@@ -231,6 +243,10 @@
 				60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */,
 				60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */,
 				60475ACF1698F84700C28D67 /* Barthowheel.ttf in Resources */,
+				6D8A8A3D16990384008DE899 /* login-bg.png in Resources */,
+				6D8A8A3E16990384008DE899 /* login-bg@2x.png in Resources */,
+				6D8A8A3F16990384008DE899 /* logo.png in Resources */,
+				6D8A8A4016990384008DE899 /* logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
