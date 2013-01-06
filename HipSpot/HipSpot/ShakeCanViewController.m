@@ -53,7 +53,7 @@
     
     float max = 1200 - self.backgroundScrollView.frame.size.height;
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall.jpg"]];
-    [self.backgroundScrollView setBackgroundColor:[UIColor greenColor]];
+    [self.backgroundScrollView setBackgroundColor:[UIColor blackColor]];
     [self.backgroundScrollView setContentSize:CGSizeMake(320, max)];
     [self.backgroundScrollView addSubview:imageView];
     [self.backgroundScrollView setContentOffset:CGPointMake(0, max)];

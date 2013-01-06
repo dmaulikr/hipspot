@@ -50,6 +50,11 @@
     self.hipScore.font = [UIFont fontWithName:@"Barthowheel" size:25];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [indicator startAnimating];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
