@@ -11,7 +11,7 @@
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
 #define TIME_TO_SHAKE               40
 #define FLY_RATE                    200     // Flying rate in pixels per second
-#define STRENGTH_TO_OFFSET_RATIO    10      // 10 pixels per strength
+#define STRENGTH_TO_OFFSET_RATIO    50      // 10 pixels per strength
 
 @interface ShakeCanViewController ()
 @property (nonatomic) CGAffineTransform leftWobble;
@@ -88,7 +88,11 @@
     if (!self.isShakable) return;
     
     self.shakeCount++;
-    self.shakeLabel.text = [NSString stringWithFormat:@"%i", self.shakeCount];
+//    self.shakeLabel.text = [NSString stringWithFormat:@"%i", self.shakeCount];
+    if (self.shakeCount < 14) {
+        self.shakeLabel.frame = CGRectMake(self.shakeLabel.frame.origin.x, self.shakeLabel.frame.origin.y,
+                                       self.shakeLabel.frame.size.width + 20, self.shakeLabel.frame.size.height);
+    }
     
     if (!self.isWobbling) {
         self.isWobbling = YES;
@@ -105,6 +109,9 @@
 
 - (void) animateSodaCan
 {
+    self.shakeLabel.hidden = YES;
+    self.timerLabel.hidden = YES;
+    self.shakeButton.hidden = YES;
     if (self.shakeCount > 0) {
         [self scrollBackground];
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
