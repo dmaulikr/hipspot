@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NearbyViewController.h"
+#import "AchievementViewController.h"
 
 #define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
 #define FS_CALLBACK @"hipspot://foursquare"
@@ -63,6 +64,13 @@
     }
     
     [self.navigationController pushViewController:nearbyController animated:YES];
+}
+
+- (IBAction)showAchievements:(id)sender
+{
+    AchievementViewController *viewController = [[AchievementViewController alloc] initWithNibName:@"AchievementViewController" bundle:[NSBundle mainBundle]];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

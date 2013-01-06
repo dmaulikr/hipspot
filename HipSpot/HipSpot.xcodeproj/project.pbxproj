@@ -32,6 +32,8 @@
 		60AF859E1698C8770004AC79 /* gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60AF859D1698C8770004AC79 /* gradient.jpg */; };
 		60EC3BA7169919A200363C7B /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3BA4169919A200363C7B /* JMImageCache.m */; };
 		60EC3BA8169919A200363C7B /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3BA6169919A200363C7B /* UIImageView+JMImageCache.m */; };
+		60EC3BB916992EED00363C7B /* AchievementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3BB716992EED00363C7B /* AchievementViewController.m */; };
+		60EC3BBA16992EED00363C7B /* AchievementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60EC3BB816992EED00363C7B /* AchievementViewController.xib */; };
 		6D8A8A2E1698F4AF008DE899 /* wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2C1698F4AC008DE899 /* wall.jpg */; };
 		6D8A8A2F1698F4AF008DE899 /* wall@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */; };
 		6D8A8A331698F7CB008DE899 /* sodacan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8A8A311698F7C9008DE899 /* sodacan.png */; };
@@ -87,6 +89,9 @@
 		60EC3BA4169919A200363C7B /* JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMImageCache.m; sourceTree = "<group>"; };
 		60EC3BA5169919A200363C7B /* UIImageView+JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JMImageCache.h"; sourceTree = "<group>"; };
 		60EC3BA6169919A200363C7B /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
+		60EC3BB616992EED00363C7B /* AchievementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementViewController.h; sourceTree = "<group>"; };
+		60EC3BB716992EED00363C7B /* AchievementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementViewController.m; sourceTree = "<group>"; };
+		60EC3BB816992EED00363C7B /* AchievementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchievementViewController.xib; sourceTree = "<group>"; };
 		6D8A8A2C1698F4AC008DE899 /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 		6D8A8A2D1698F4AE008DE899 /* wall@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wall@2x.jpg"; sourceTree = "<group>"; };
 		6D8A8A311698F7C9008DE899 /* sodacan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sodacan.png; sourceTree = "<group>"; };
@@ -196,6 +201,9 @@
 				60475ABA1698DA0B00C28D67 /* NearbyViewController.m */,
 				60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */,
 				60475AC71698F1D200C28D67 /* NearbyViewCell.xib */,
+				60EC3BB616992EED00363C7B /* AchievementViewController.h */,
+				60EC3BB716992EED00363C7B /* AchievementViewController.m */,
+				60EC3BB816992EED00363C7B /* AchievementViewController.xib */,
 			);
 			path = HipSpot;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 				6D8A8A5416992180008DE899 /* gametext.png in Resources */,
 				6D8A8A57169923D4008DE899 /* checkin@2x.png in Resources */,
 				6D8A8A59169927E8008DE899 /* endgame.png in Resources */,
+				60EC3BBA16992EED00363C7B /* AchievementViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 				60475ADB1699074A00C28D67 /* LaunchGameViewController.m in Sources */,
 				60EC3BA7169919A200363C7B /* JMImageCache.m in Sources */,
 				60EC3BA8169919A200363C7B /* UIImageView+JMImageCache.m in Sources */,
+				60EC3BB916992EED00363C7B /* AchievementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

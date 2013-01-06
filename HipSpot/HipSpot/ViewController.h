@@ -14,5 +14,6 @@
 @property (nonatomic, strong) BZFoursquare *fourSquare;
 
 - (IBAction)showNearby:(id)sender;
+- (IBAction)showAchievements:(id)sender;
 
 @end
