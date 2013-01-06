@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60475AB01698D89F00C28D67 /* BZFoursquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 60475AAD1698D89F00C28D67 /* BZFoursquare.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60475AB11698D89F00C28D67 /* BZFoursquareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60475AAF1698D89F00C28D67 /* BZFoursquareRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60475AB41698D8DD00C28D67 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60475AB31698D8DD00C28D67 /* MobileCoreServices.framework */; };
+		60475ABC1698DA0B00C28D67 /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60475ABA1698DA0B00C28D67 /* NearbyViewController.m */; };
+		60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */; };
+		60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475AC71698F1D200C28D67 /* NearbyViewCell.xib */; };
 		60AF85761698B5E80004AC79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85751698B5E80004AC79 /* UIKit.framework */; };
 		60AF85781698B5E80004AC79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85771698B5E80004AC79 /* Foundation.framework */; };
 		60AF857A1698B5E80004AC79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85791698B5E80004AC79 /* CoreGraphics.framework */; };
@@ -24,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60475AAC1698D89F00C28D67 /* BZFoursquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZFoursquare.h; sourceTree = "<group>"; };
+		60475AAD1698D89F00C28D67 /* BZFoursquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZFoursquare.m; sourceTree = "<group>"; };
+		60475AAE1698D89F00C28D67 /* BZFoursquareRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZFoursquareRequest.h; sourceTree = "<group>"; };
+		60475AAF1698D89F00C28D67 /* BZFoursquareRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZFoursquareRequest.m; sourceTree = "<group>"; };
+		60475AB31698D8DD00C28D67 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		60475AB91698DA0B00C28D67 /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
+		60475ABA1698DA0B00C28D67 /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
+		60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
+		60475AC71698F1D200C28D67 /* NearbyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewCell.xib; sourceTree = "<group>"; };
 		60AF85711698B5E80004AC79 /* HipSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AF85751698B5E80004AC79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60AF85771698B5E80004AC79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60475AB41698D8DD00C28D67 /* MobileCoreServices.framework in Frameworks */,
 				60AF85761698B5E80004AC79 /* UIKit.framework in Frameworks */,
 				60AF85781698B5E80004AC79 /* Foundation.framework in Frameworks */,
 				60AF857A1698B5E80004AC79 /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60475AAB1698D89F00C28D67 /* BZFoursquare */ = {
+			isa = PBXGroup;
+			children = (
+				60475AAC1698D89F00C28D67 /* BZFoursquare.h */,
+				60475AAD1698D89F00C28D67 /* BZFoursquare.m */,
+				60475AAE1698D89F00C28D67 /* BZFoursquareRequest.h */,
+				60475AAF1698D89F00C28D67 /* BZFoursquareRequest.m */,
+			);
+			path = BZFoursquare;
+			sourceTree = "<group>";
+		};
 		60AF85661698B5E80004AC79 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +107,7 @@
 		60AF85741698B5E80004AC79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60475AB31698D8DD00C28D67 /* MobileCoreServices.framework */,
 				60AF85751698B5E80004AC79 /* UIKit.framework */,
 				60AF85771698B5E80004AC79 /* Foundation.framework */,
 				60AF85791698B5E80004AC79 /* CoreGraphics.framework */,
@@ -90,6 +118,7 @@
 		60AF857B1698B5E80004AC79 /* HipSpot */ = {
 			isa = PBXGroup;
 			children = (
+				60475AAB1698D89F00C28D67 /* BZFoursquare */,
 				60AF859D1698C8770004AC79 /* gradient.jpg */,
 				60AF85841698B5E80004AC79 /* AppDelegate.h */,
 				60AF85851698B5E80004AC79 /* AppDelegate.m */,
@@ -100,6 +129,10 @@
 				60AF85981698B63C0004AC79 /* ShakeCanViewController.h */,
 				60AF85991698B63C0004AC79 /* ShakeCanViewController.m */,
 				60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */,
+				60475AB91698DA0B00C28D67 /* NearbyViewController.h */,
+				60475ABA1698DA0B00C28D67 /* NearbyViewController.m */,
+				60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */,
+				60475AC71698F1D200C28D67 /* NearbyViewCell.xib */,
 			);
 			path = HipSpot;
 			sourceTree = "<group>";
@@ -176,6 +209,8 @@
 				60AF85921698B5E80004AC79 /* ViewController.xib in Resources */,
 				60AF859C1698B63C0004AC79 /* ShakeCanViewController.xib in Resources */,
 				60AF859E1698C8770004AC79 /* gradient.jpg in Resources */,
+				60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */,
+				60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +225,9 @@
 				60AF85861698B5E80004AC79 /* AppDelegate.m in Sources */,
 				60AF858F1698B5E80004AC79 /* ViewController.m in Sources */,
 				60AF859B1698B63C0004AC79 /* ShakeCanViewController.m in Sources */,
+				60475AB01698D89F00C28D67 /* BZFoursquare.m in Sources */,
+				60475AB11698D89F00C28D67 /* BZFoursquareRequest.m in Sources */,
+				60475ABC1698DA0B00C28D67 /* NearbyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +344,7 @@
 				60AF85971698B5E80004AC79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

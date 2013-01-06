@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BZFoursquare.h"
 
 @class ViewController;
 
