@@ -137,7 +137,8 @@
                              animations:^{
                                  self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, 1000);
                              } completion:^(BOOL finished) {
-        }];
+                                 [self gameEnded];
+                            }];
     }];
 }
 
@@ -156,6 +157,12 @@
     float offset = strength * STRENGTH_TO_OFFSET_RATIO;
     
     return offset / FLY_RATE;
+}
+
+#pragma mark - YangShun's Callback
+- (void) gameEnded
+{
+    NSLog(@"game ended");
 }
 
 @end
