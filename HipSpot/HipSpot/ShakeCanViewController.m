@@ -49,7 +49,7 @@
     [self startTimer];
     
     float max = 1200 - self.backgroundScrollView.frame.size.height;
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gradient.jpg"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall.jpg"]];
     [self.backgroundScrollView setBackgroundColor:[UIColor greenColor]];
     [self.backgroundScrollView setContentSize:CGSizeMake(320, max)];
     [self.backgroundScrollView addSubview:imageView];
@@ -92,14 +92,11 @@
     if (!self.isWobbling) {
         self.isWobbling = YES;
         [UIView animateWithDuration:0.1 animations:^{
-            NSLog(@"Animating can");
             self.sodaCanView.transform = self.leftWobble;
             self.sodaCanView.transform = self.rightWobble;
-            NSLog(@"Animating can end");
         } completion:^(BOOL finished) {
             self.sodaCanView.transform = CGAffineTransformIdentity;
             self.isWobbling = NO;
-            NSLog(@"Animating can completed");
         }];
     }
 }
@@ -111,11 +108,8 @@
         [self scrollBackground];
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                             NSLog(@"Firing can");
                              self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, -200);
-                             NSLog(@"Firing can end");
                          } completion:^(BOOL finished) {
-                             NSLog(@"Firing can complete");
                          }];
     }
     
@@ -123,8 +117,6 @@
 - (void) scrollBackground {
     float offset = [self calculateOffsetFromStrength:self.shakeCount];
     float duration = [self calculateDurationFromStrength:self.shakeCount];
-    
-    NSLog(@"Offset: %f (%f)", offset, duration);
     
     [UIView animateWithDuration:duration delay:0.5 options:0 animations:^{
         [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
