@@ -14,6 +14,8 @@
 		60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */; };
 		60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475AC71698F1D200C28D67 /* NearbyViewCell.xib */; };
 		60475ACF1698F84700C28D67 /* Barthowheel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60475ACE1698F84700C28D67 /* Barthowheel.ttf */; };
+		60475ADB1699074A00C28D67 /* LaunchGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60475AD91699074A00C28D67 /* LaunchGameViewController.m */; };
+		60475ADC1699074A00C28D67 /* LaunchGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60475ADA1699074A00C28D67 /* LaunchGameViewController.xib */; };
 		60AF85761698B5E80004AC79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85751698B5E80004AC79 /* UIKit.framework */; };
 		60AF85781698B5E80004AC79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85771698B5E80004AC79 /* Foundation.framework */; };
 		60AF857A1698B5E80004AC79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF85791698B5E80004AC79 /* CoreGraphics.framework */; };
@@ -49,6 +51,9 @@
 		60475ABB1698DA0B00C28D67 /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
 		60475AC71698F1D200C28D67 /* NearbyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewCell.xib; sourceTree = "<group>"; };
 		60475ACE1698F84700C28D67 /* Barthowheel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Barthowheel.ttf; sourceTree = "<group>"; };
+		60475AD81699074A00C28D67 /* LaunchGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGameViewController.h; sourceTree = "<group>"; };
+		60475AD91699074A00C28D67 /* LaunchGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGameViewController.m; sourceTree = "<group>"; };
+		60475ADA1699074A00C28D67 /* LaunchGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchGameViewController.xib; sourceTree = "<group>"; };
 		60AF85711698B5E80004AC79 /* HipSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AF85751698B5E80004AC79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60AF85771698B5E80004AC79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +158,9 @@
 				60AF858E1698B5E80004AC79 /* ViewController.m */,
 				60AF85901698B5E80004AC79 /* ViewController.xib */,
 				60AF857C1698B5E80004AC79 /* Supporting Files */,
+				60475AD81699074A00C28D67 /* LaunchGameViewController.h */,
+				60475AD91699074A00C28D67 /* LaunchGameViewController.m */,
+				60475ADA1699074A00C28D67 /* LaunchGameViewController.xib */,
 				60AF85981698B63C0004AC79 /* ShakeCanViewController.h */,
 				60AF85991698B63C0004AC79 /* ShakeCanViewController.m */,
 				60AF859A1698B63C0004AC79 /* ShakeCanViewController.xib */,
@@ -243,6 +251,7 @@
 				60475ABD1698DA0B00C28D67 /* NearbyViewController.xib in Resources */,
 				60475AC81698F1D200C28D67 /* NearbyViewCell.xib in Resources */,
 				60475ACF1698F84700C28D67 /* Barthowheel.ttf in Resources */,
+				60475ADC1699074A00C28D67 /* LaunchGameViewController.xib in Resources */,
 				6D8A8A3D16990384008DE899 /* login-bg.png in Resources */,
 				6D8A8A3E16990384008DE899 /* login-bg@2x.png in Resources */,
 				6D8A8A3F16990384008DE899 /* logo.png in Resources */,
@@ -264,6 +273,7 @@
 				60475AB01698D89F00C28D67 /* BZFoursquare.m in Sources */,
 				60475AB11698D89F00C28D67 /* BZFoursquareRequest.m in Sources */,
 				60475ABC1698DA0B00C28D67 /* NearbyViewController.m in Sources */,
+				60475ADB1699074A00C28D67 /* LaunchGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
