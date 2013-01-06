@@ -7,6 +7,7 @@
 //
 
 #import "NearbyViewController.h"
+#import "LaunchGameViewController.h"
 
 #define FS_CLIENTID @"0NNXENMTYWXF2LBOVWYFT2ZUA3YTPOMTNCGTIULFN4PNZ5SK"
 #define FS_CALLBACK @"hipspot://foursquare"
@@ -64,6 +65,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 68.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LaunchGameViewController *launchGameController = [[LaunchGameViewController alloc] initWithNibName:@"LaunchGameViewController" bundle:[NSBundle mainBundle]];
+    
+    [self.navigationController pushViewController:launchGameController animated:YES];
 }
 
 #pragma mark - Table Data Source
