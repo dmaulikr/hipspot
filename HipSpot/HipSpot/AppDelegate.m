@@ -24,6 +24,7 @@
     UIViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:[NSBundle mainBundle]];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navController.navigationBarHidden = YES;
     self.window.rootViewController = navController;
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
@@ -61,7 +62,7 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    NearbyViewController *masterViewController = [navigationController.viewControllers objectAtIndex:0];
+    NearbyViewController *masterViewController = [navigationController.viewControllers objectAtIndex:1];
     BZFoursquare *foursquare = masterViewController.fourSquare;
     return [foursquare handleOpenURL:url];
 }
