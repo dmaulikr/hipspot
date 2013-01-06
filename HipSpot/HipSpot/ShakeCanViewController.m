@@ -130,13 +130,11 @@
         [self.backgroundScrollView setContentOffset:CGPointMake(0, offset)];
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:duration delay:1 options:0 animations:^{
-            float max = 1200 - self.backgroundScrollView.frame.size.height;
-            [self.backgroundScrollView setContentOffset:CGPointMake(0, max)];
             self.sodaCanView.transform = CGAffineTransformMakeRotation(RADIANS(180));
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
                              animations:^{
-                                 self.sodaCanView.transform = CGAffineTransformIdentity;
+                                 self.sodaCanView.transform = CGAffineTransformMakeTranslation(0, 1000);
                              } completion:^(BOOL finished) {
                              }];
         }];
