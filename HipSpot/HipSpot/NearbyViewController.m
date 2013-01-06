@@ -98,12 +98,15 @@
             UILabel *label = (UILabel*) view;
             switch (label.tag) {
                 case 0:
+                    label.font = [UIFont fontWithName:@"Barthowheel" size:28];
                     label.text = data.name;
                     break;
                 case 1:
+                    label.font = [UIFont fontWithName:@"Barthowheel" size:20];
                     label.text = data.type;
                     break;
                 case 2:
+                    label.font = [UIFont fontWithName:@"Barthowheel" size:20];
                     label.text = [NSString stringWithFormat:@"%im", data.distance];
                     break;
             }
