@@ -28,6 +28,15 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)checkin:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Check In"
+                                                    message:@"You have checked in at Burger Bar!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

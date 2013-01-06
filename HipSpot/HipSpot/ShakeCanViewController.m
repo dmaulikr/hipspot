@@ -13,7 +13,9 @@
 #define FLY_RATE                    200     // Flying rate in pixels per second
 #define STRENGTH_TO_OFFSET_RATIO    50      // 10 pixels per strength
 
-@interface ShakeCanViewController ()
+@interface ShakeCanViewController () {
+    IBOutlet UIImageView *gameText;
+}
 @property (nonatomic) CGAffineTransform leftWobble;
 @property (nonatomic) CGAffineTransform rightWobble;
 
@@ -112,6 +114,7 @@
     self.shakeLabel.hidden = YES;
     self.timerLabel.hidden = YES;
     self.shakeButton.hidden = YES;
+    gameText.hidden = YES;
     if (self.shakeCount > 0) {
         [self scrollBackground];
         [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
