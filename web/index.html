@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HipSpot!</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container" style="height:100%; position:relative">
+      <div style="position:absolute; right: -50px; bottom: 30px; z-index:50;"><img src="img/badge.png" width="150"/></div>
+      <center>
+        <div id="myCarousel" class="carousel slide" style="z-index: 1">
+          <div class="carousel-inner">
+            <div class="active item">
+              <img src="img/slide1.png" />
+            </div>
+            <div class="item">
+              <img src="img/slide2.png" />
+            </div>
+            <div class="item">
+              <img src="img/slide3.png" />
+            </div>
+            <div class="item">
+              <img src="img/slide4.png" />
+            </div>
+          </div>
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+      </center>
+      <center style="font-size: 18px; font-family: Raleway; color: white"> Foursquare Hackathon 2013. <br/>Designed by <a href="https://www.facebook.com/yangshun" target="_blank">Yang Shun Tay</a>. Developed by <a href="https://www.facebook.com/soedarsono" target="_blank">Soedarsono Lim</a>.<br/>You may contact us <a href="mailto:yangshun@easilydo.com">here</a>.</center>
+      <br/>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37649862-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script>
+      $('.carousel').carousel({
+        interval: 6000,
+        pause: "hover"
+      })
+    </script>
+  </body>
+</html>
